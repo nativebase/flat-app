@@ -7,7 +7,7 @@ import {
   DrawerNavigationProp,
 } from '@react-navigation/drawer';
 
-import { CUSTOM_DRAWER } from '../dummyData/CustomDrawerData';
+import { CUSTOM_DRAWER } from '../../../dummyData/CustomDrawerData';
 
 type RootDrawerParamList = {
   Home: undefined;
@@ -22,7 +22,6 @@ type ProfileScreenNavigationProp = DrawerNavigationProp<
 >;
 
 type Props = {
-  //   activeTintColor?: string | undefined;
   children: ReactNode;
   navigation: ProfileScreenNavigationProp;
 };

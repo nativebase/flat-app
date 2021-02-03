@@ -1,23 +1,19 @@
 export const CUSTOM_DRAWER = [
   {
     id: 1,
-    // name: 'NEWS',
-    name: 'LOGIN',
-
+    name: 'NEWS',
     iconName: 'hashtag',
     iconType: 'FontAwesome5',
     iconColor: 'black',
-    route: 'Login',
+    route: 'News',
   },
   {
     id: 2,
-    // name: 'CHANNEL',
-    name: 'OnBoarding',
-
+    name: 'CHANNEL',
     iconName: 'view-comfortable',
     iconType: 'MaterialIcons',
     iconColor: 'black',
-    route: 'OnBoarding',
+    route: 'Channel',
   },
   {
     id: 3,
@@ -25,7 +21,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'stats-chart',
     iconType: 'Ionicons',
     iconColor: 'black',
-    route: 'Notifications',
+    route: 'OverView',
   },
   {
     id: 4,
@@ -33,7 +29,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'calendar',
     iconType: 'AntDesign',
     iconColor: 'black',
-    route: 'Notifications',
+    route: 'OverView',
   },
   {
     id: 5,
@@ -41,7 +37,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'clock-time-ten-outline',
     iconType: 'MaterialCommunityIcons',
     iconColor: 'black',
-    route: 'Notifications',
+    route: 'OverView',
   },
   {
     id: 6,
@@ -49,7 +45,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'user',
     iconType: 'FontAwesome',
     iconColor: 'black',
-    route: 'Notifications',
+    route: 'OverView',
   },
   {
     id: 7,
@@ -57,7 +53,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'md-settings',
     iconType: 'Ionicons',
     iconColor: 'black',
-    route: 'Notifications',
+    route: 'OverView',
   },
   {
     id: 8,
@@ -65,6 +61,6 @@ export const CUSTOM_DRAWER = [
     iconName: 'file',
     iconType: 'Octicons',
     iconColor: 'black',
-    route: 'Notifications',
+    route: 'OverView',
   },
 ];

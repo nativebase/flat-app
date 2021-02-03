@@ -10,8 +10,26 @@ import {
   Image,
 } from 'native-base';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StackNavigationProp } from '@react-navigation/stack';
 
-export default function Login() {
+type RootDrawerParamList = {
+  Login: undefined;
+  OnBoarding: undefined;
+  ForgotPassword: undefined;
+  CreateAccount: undefined;
+  DrawerHome: undefined;
+};
+
+type ProfileScreenNavigationProp = StackNavigationProp<
+  RootDrawerParamList,
+  'Login'
+>;
+
+type Props = {
+  navigation: ProfileScreenNavigationProp;
+};
+
+export default function Login(props: Props) {
   return (
     <View style={{ flex: 1 }}>
       <Image
@@ -81,16 +99,27 @@ export default function Login() {
               variant={'solid'}
               bg={'green.100'}
               color={'white.100'}
+              onPress={() => {
+                props.navigation.navigate('OnBoarding');
+              }}
             >
               Get Started
             </Button>
             <HStack justifyContent={'space-between'} mt={2}>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  props.navigation.navigate('CreateAccount');
+                }}
+              >
                 <Text color={'white.100'} fontWeight={'800'}>
                   Create Account
                 </Text>
               </TouchableOpacity>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  props.navigation.navigate('ForgotPassword');
+                }}
+              >
                 <Text color={'white.100'} fontWeight={'800'}>
                   Forgot Password
                 </Text>
@@ -103,7 +132,14 @@ export default function Login() {
               position={'absolute'}
               bottom={10}
             >
-              <Button size={'sm'} variant={'outline'} color={'white.100'}>
+              <Button
+                size={'sm'}
+                variant={'outline'}
+                color={'white.100'}
+                onPress={() => {
+                  props.navigation.navigate('OnBoarding');
+                }}
+              >
                 Skip
               </Button>
             </Box>
