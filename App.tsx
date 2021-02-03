@@ -8,7 +8,7 @@ import { newColorTheme } from './utils/colorTheme';
 
 import Login from './src/screen/authScreen/Login';
 import OnBoarding from './src/screen/onBoardingScreen/OnBoarding';
-import DrawerHome from './src/screen/drawerScreen/DrawerHome';
+import DrawerHome from './src/screen/drawerScreen/index';
 import CreateAccount from './src/screen/authScreen/CreateAccount';
 import ForgotPassword from './src/screen/authScreen/ForgotPassword';
 

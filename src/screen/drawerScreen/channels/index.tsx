@@ -21,7 +21,7 @@ type Props = {
 export default function Channel(props: Props) {
   return (
     <View flex={1} alignItems={'center'} justifyContent={'center'}>
-      <Text>Channel Screen</Text>
+      <Text>Channel Screen q</Text>
       <Button
         size='sm'
         colorScheme='teal'

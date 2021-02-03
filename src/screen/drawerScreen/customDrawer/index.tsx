@@ -2,9 +2,9 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import DrawerContent from './DrawerContent';
-import News from './News';
-import Channel from './Channels';
-import OverView from './OverView';
+import News from '../news';
+import Channel from '../channels';
+import OverView from '../overView';
 
 type RootDrawerParamList = {
   News: undefined;
