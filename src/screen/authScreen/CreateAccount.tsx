@@ -1,27 +1,11 @@
 import React from 'react';
+import { Text, Button, Center } from 'native-base';
 
-import { Text, Button, View } from 'native-base';
-import { StackNavigationProp } from '@react-navigation/stack';
+import { AuthStackProps } from '../../interfaces';
 
-type RootDrawerParamList = {
-  Login: undefined;
-  OnBoarding: undefined;
-  ForgotPassword: undefined;
-  CreateAccount: undefined;
-  DrawerHome: undefined;
-};
-
-type ProfileScreenNavigationProp = StackNavigationProp<
-  RootDrawerParamList,
-  'CreateAccount'
->;
-
-type Props = {
-  navigation: ProfileScreenNavigationProp;
-};
-export default function CreateAccount(props: Props) {
+export default function CreateAccount(props: AuthStackProps) {
   return (
-    <View flex={1} alignItems={'center'} justifyContent={'center'}>
+    <Center flex={1}>
       <Text>CreateAccount Screen</Text>
       <Button
         size='sm'
@@ -31,6 +15,6 @@ export default function CreateAccount(props: Props) {
       >
         Go Back
       </Button>
-    </View>
+    </Center>
   );
 }

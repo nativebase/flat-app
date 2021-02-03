@@ -1,32 +1,16 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Text, View, Box, Icon, HStack, VStack, Avatar } from 'native-base';
 
-import {
-  DrawerContentScrollView,
-  DrawerNavigationProp,
-} from '@react-navigation/drawer';
+import { DrawerContentScrollView } from '@react-navigation/drawer';
 
 import { CUSTOM_DRAWER } from '../../../../dummyData/CustomDrawerData';
+import { DrawerProps } from '../../../interfaces';
+// type Props = {
+//   children: ReactNode;
+// };
 
-type RootDrawerParamList = {
-  Home: undefined;
-  Notifications: undefined;
-  Login: undefined;
-  OnBoarding: undefined;
-};
-
-type ProfileScreenNavigationProp = DrawerNavigationProp<
-  RootDrawerParamList,
-  'Home'
->;
-
-type Props = {
-  children: ReactNode;
-  navigation: ProfileScreenNavigationProp;
-};
-
-export default function DrawerContent(props: Props) {
+export default function DrawerContent(props: DrawerProps) {
   return (
     <View flex={1} pl={5} pr={5} pt={5} bg={'green.100'}>
       <DrawerContentScrollView {...props}>

@@ -1,24 +1,9 @@
 import React from 'react';
-import { DrawerNavigationProp } from '@react-navigation/drawer';
-
 import { View, Text, Button } from 'native-base';
 
-type RootDrawerParamList = {
-  News: undefined;
-  Channel: undefined;
-  OverView: undefined;
-};
+import { DrawerProps } from '../../../interfaces';
 
-type ProfileScreenNavigationProp = DrawerNavigationProp<
-  RootDrawerParamList,
-  'News'
->;
-
-type Props = {
-  navigation: ProfileScreenNavigationProp;
-};
-
-export default function News(props: Props) {
+export default function News(props: DrawerProps) {
   return (
     <View flex={1} alignItems={'center'} justifyContent={'center'}>
       <Text>News Screen</Text>

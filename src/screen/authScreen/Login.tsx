@@ -8,30 +8,14 @@ import {
   Input,
   Button,
   Image,
+  Flex,
 } from 'native-base';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { StackNavigationProp } from '@react-navigation/stack';
+import { AuthStackProps } from '../../interfaces';
 
-type RootDrawerParamList = {
-  Login: undefined;
-  OnBoarding: undefined;
-  ForgotPassword: undefined;
-  CreateAccount: undefined;
-  DrawerHome: undefined;
-};
-
-type ProfileScreenNavigationProp = StackNavigationProp<
-  RootDrawerParamList,
-  'Login'
->;
-
-type Props = {
-  navigation: ProfileScreenNavigationProp;
-};
-
-export default function Login(props: Props) {
+export default function Login(props: AuthStackProps) {
   return (
-    <View style={{ flex: 1 }}>
+    <Flex flex={1}>
       <Image
         flex={1}
         width={'null'}
@@ -146,6 +130,6 @@ export default function Login(props: Props) {
           </Box>
         </View>
       </View>
-    </View>
+    </Flex>
   );
 }

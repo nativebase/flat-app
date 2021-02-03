@@ -1,26 +1,10 @@
 import React from 'react';
-import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { Text, View } from 'native-base';
 
 import Onboarding from 'react-native-onboarding-swiper';
 import { TouchableOpacity, Image } from 'react-native';
 
-type RootDrawerParamList = {
-  Login: undefined;
-  OnBoarding: undefined;
-  ForgotPassword: undefined;
-  CreateAccount: undefined;
-  DrawerHome: undefined;
-};
-
-type ProfileScreenNavigationProp = DrawerNavigationProp<
-  RootDrawerParamList,
-  'OnBoarding'
->;
-
-type Props = {
-  navigation: ProfileScreenNavigationProp;
-};
+import { AuthStackProps } from '../../interfaces';
 
 const Dots = ({ selected }: any) => {
   let backgroundColor;
@@ -55,7 +39,7 @@ const Done = ({ ...props }) => (
   </TouchableOpacity>
 );
 
-export default function OnBoarding(props: Props) {
+export default function OnBoarding(props: AuthStackProps) {
   const onDone = async () => {
     try {
       props.navigation.navigate('DrawerHome');

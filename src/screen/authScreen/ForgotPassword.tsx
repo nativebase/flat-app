@@ -1,26 +1,11 @@
 import React from 'react';
+import { Text, Button, Center } from 'native-base';
 
-import { Text, Button, View } from 'native-base';
-import { StackNavigationProp } from '@react-navigation/stack';
+import { AuthStackProps } from '../../interfaces';
 
-type RootDrawerParamList = {
-  Login: undefined;
-  OnBoarding: undefined;
-  ForgotPassword: undefined;
-  CreateAccount: undefined;
-};
-
-type ProfileScreenNavigationProp = StackNavigationProp<
-  RootDrawerParamList,
-  'ForgotPassword'
->;
-
-type Props = {
-  navigation: ProfileScreenNavigationProp;
-};
-export default function ForgotPassword(props: Props) {
+export default function ForgotPassword(props: AuthStackProps) {
   return (
-    <View flex={1} alignItems={'center'} justifyContent={'center'}>
+    <Center flex={1}>
       <Text>ForgotPassword Screen</Text>
       <Button
         size='sm'
@@ -30,6 +15,6 @@ export default function ForgotPassword(props: Props) {
       >
         Go Back
       </Button>
-    </View>
+    </Center>
   );
 }

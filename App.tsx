@@ -8,13 +8,13 @@ import { newColorTheme } from './utils/colorTheme';
 
 import Login from './src/screen/authScreen/Login';
 import OnBoarding from './src/screen/onBoardingScreen/OnBoarding';
-import DrawerHome from './src/screen/drawerScreen/index';
+import DrawerHome from './src/screen/drawerScreen';
 import CreateAccount from './src/screen/authScreen/CreateAccount';
 import ForgotPassword from './src/screen/authScreen/ForgotPassword';
 
 const theme = extendTheme({ colors: newColorTheme });
 
-type RootDrawerParamList = {
+type RootStackParamList = {
   Login: undefined;
   OnBoarding: undefined;
   ForgotPassword: undefined;
@@ -22,7 +22,7 @@ type RootDrawerParamList = {
   DrawerHome: undefined;
 };
 
-const Stack = createStackNavigator<RootDrawerParamList>();
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
