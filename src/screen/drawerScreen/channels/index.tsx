@@ -1,20 +1,31 @@
 import React from 'react';
-import { View, Text, Button } from 'native-base';
+import { SafeAreaView } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import Channel from './Channel';
+import ChannelDetail from './ChannelDetail';
 
 import { DrawerProps } from '../../../interfaces';
 
-export default function Channel(props: DrawerProps) {
+type RootStackParamList = {
+  Channel: undefined;
+  ChannelDetail: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
+
+export default function Index(props: DrawerProps) {
   return (
-    <View flex={1} alignItems={'center'} justifyContent={'center'}>
-      <Text>Channel Screen q</Text>
-      <Button
-        size='sm'
-        colorScheme='teal'
-        variant={'outline'}
-        onPress={() => props.navigation.goBack()}
+    <SafeAreaView style={{ flex: 1 }}>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+        initialRouteName={'Channel'}
       >
-        Go Back
-      </Button>
-    </View>
+        <Stack.Screen name='Channel' component={Channel} />
+        <Stack.Screen name='ChannelDetail' component={ChannelDetail} />
+      </Stack.Navigator>
+    </SafeAreaView>
   );
 }

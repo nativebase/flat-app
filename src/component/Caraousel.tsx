@@ -51,6 +51,7 @@ export default function Caraousel(props: IProps) {
         >
           {ONBOARDING_DATA.map((item: any, index: number) => (
             <View
+              key={index}
               bg={'white.100'}
               height={2}
               width={2}
