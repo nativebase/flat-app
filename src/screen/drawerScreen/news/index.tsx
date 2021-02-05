@@ -5,13 +5,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { DrawerProps } from '../../../interfaces';
 
 import NewsList from './NewsList';
+import Comment from './Comment';
 import Header from '../../../component/Header';
 import Caraousel from '../../../component/Caraousel';
-import NewsDetail from '../../../component/NewsDetail';
+import NewsDetail from '../../../component/newsDetail';
 
 type RootStackParamList = {
   Home: undefined;
   NewsDetail: undefined;
+  Comment: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -23,10 +25,6 @@ const Home = (props: any) => {
 
   const OpenDrawer = () => {
     props.navigation.openDrawer();
-  };
-
-  const GoBack = () => {
-    props.navigation.goBack();
   };
 
   return (
@@ -54,6 +52,7 @@ export default function News(props: DrawerProps) {
     >
       <Stack.Screen name='Home' component={Home} />
       <Stack.Screen name='NewsDetail' component={NewsDetail} />
+      <Stack.Screen name='Comment' component={Comment} />
     </Stack.Navigator>
   );
 }

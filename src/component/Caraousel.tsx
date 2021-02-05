@@ -4,7 +4,14 @@ import { View, Text, Box, HStack, Image, VStack, Icon } from 'native-base';
 
 import { ONBOARDING_DATA } from '../../dummyData/OnBoardingData';
 
-export default function Caraousel(props: any) {
+interface IProps {
+  height: number;
+  showText?: boolean;
+  showDots: boolean;
+  NavigateTo?: () => void;
+}
+
+export default function Caraousel(props: IProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const setSelectedIndexFunc = (event: any) => {

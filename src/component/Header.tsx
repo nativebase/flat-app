@@ -1,11 +1,12 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Box, HStack, Icon, View } from 'native-base';
 
 interface IProps {
   mainHeader: boolean;
-  OpenDrawer: () => void;
+  OpenDrawer?: () => void;
   GoBack?: () => void;
+  NavigateTo?: () => void;
 }
 
 export default function Header(props: IProps) {
@@ -34,7 +35,52 @@ export default function Header(props: IProps) {
           </Box>
           <Box></Box>
         </HStack>
-      ) : null}
+      ) : (
+        <HStack
+          flex={1}
+          bg={'green.100'}
+          justifyContent={'space-between'}
+          alignItems={'center'}
+          pl={5}
+          pr={5}
+        >
+          <TouchableOpacity onPress={props.GoBack}>
+            <Icon
+              type='Ionicons'
+              name='arrow-back'
+              color={'white.100'}
+              size={8}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={props.NavigateTo}>
+            <Icon type='Ionicons' name='chatbox' color={'white.100'} size={8} />
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Icon
+              name='format-letter-case'
+              color={'white.100'}
+              type='MaterialCommunityIcons'
+              size={10}
+              fontWeight={'bold'}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Icon name='copy' color={'white.100'} type='Ionicons' size={8} />
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <Icon
+              name='md-download-sharp'
+              color={'white.100'}
+              type='Ionicons'
+              size={8}
+            />
+          </TouchableOpacity>
+        </HStack>
+      )}
     </View>
   );
 }
