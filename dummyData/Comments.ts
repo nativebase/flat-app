@@ -21,7 +21,7 @@ export const COMMENT_USER = [
     id: 3,
     name: 'Rohit Singh',
     uri:
-      'https://pbs.twimg.com/profile_images/1260766060401188864/ySJfMIbZ_400x400.jpg',
+      'https://pbs.twimg.com/profile_images/1177303899243343872/B0sUJIH0_400x400.jpg',
     lastMessage: 'Ready to use components built using NativeBase',
     time: 'Feb 17, 09:00 PM',
     unreadMessage: '0',

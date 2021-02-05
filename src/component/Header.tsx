@@ -7,6 +7,7 @@ interface IProps {
   OpenDrawer?: () => void;
   GoBack?: () => void;
   NavigateTo?: () => void;
+  showBackArrow?: boolean;
 }
 
 export default function Header(props: IProps) {
@@ -21,9 +22,20 @@ export default function Header(props: IProps) {
           pl={5}
           pr={5}
         >
-          <TouchableOpacity onPress={props.OpenDrawer}>
-            <Icon name='menu' color={'white.100'} type='Entypo' size={8} />
-          </TouchableOpacity>
+          {props.showBackArrow ? (
+            <TouchableOpacity onPress={props.GoBack}>
+              <Icon
+                type='Ionicons'
+                name='arrow-back'
+                color={'white.100'}
+                size={8}
+              />
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity onPress={props.OpenDrawer}>
+              <Icon name='menu' color={'white.100'} type='Entypo' size={8} />
+            </TouchableOpacity>
+          )}
 
           <Box>
             <Icon
@@ -33,7 +45,14 @@ export default function Header(props: IProps) {
               size={10}
             />
           </Box>
-          <Box></Box>
+          <Box>
+            <Icon
+              type={'FontAwesome'}
+              name={'font'}
+              color={'green.100'}
+              size={10}
+            />
+          </Box>
         </HStack>
       ) : (
         <HStack
