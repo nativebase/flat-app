@@ -1,6 +1,7 @@
 export const newColorTheme = {
   green: {
     100: '#3DD4AF',
+    200: '#728c75',
   },
 
   white: {
