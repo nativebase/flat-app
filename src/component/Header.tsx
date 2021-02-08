@@ -73,25 +73,9 @@ export default function Header(props: IProps) {
             />
           </TouchableOpacity>
 
-          {props.commentScreenNavigation ? (
-            <TouchableOpacity onPress={props.NavigateTo}>
-              <Icon
-                type='Ionicons'
-                name='chatbox'
-                color={'white.100'}
-                size={8}
-              />
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity>
-              <Icon
-                type='Ionicons'
-                name='chatbox'
-                color={'white.100'}
-                size={8}
-              />
-            </TouchableOpacity>
-          )}
+          <TouchableOpacity onPress={props.NavigateTo}>
+            <Icon type='Ionicons' name='chatbox' color={'white.100'} size={8} />
+          </TouchableOpacity>
 
           <TouchableOpacity>
             <Icon

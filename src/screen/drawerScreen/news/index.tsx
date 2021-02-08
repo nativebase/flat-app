@@ -5,10 +5,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { DrawerProps } from '../../../interfaces';
 
 import NewsList from './NewsList';
-import Comment from './Comment';
 import Header from '../../../component/Header';
 import Caraousel from '../../../component/Caraousel';
 import NewsDetail from '../../../component/newsDetail';
+import Comment from '../../../component/comment';
 
 type RootStackParamList = {
   Home: undefined;
@@ -19,10 +19,8 @@ type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 const Home = (props: any) => {
-  const NavigateWithParam = (page: string) => {
-    props.navigation.navigate(page, {
-      commentScreenNavigation: true,
-    });
+  const NavigateTo = (page: string) => {
+    props.navigation.navigate(page);
   };
 
   const OpenDrawer = () => {
@@ -37,9 +35,9 @@ const Home = (props: any) => {
           height={300}
           showText={true}
           showDots={true}
-          NavigateTo={() => NavigateWithParam('NewsDetail')}
+          NavigateTo={() => NavigateTo('NewsDetail')}
         />
-        <NewsList NavigateTo={() => NavigateWithParam('NewsDetail')} />
+        <NewsList NavigateTo={() => NavigateTo('NewsDetail')} />
       </ScrollView>
     </SafeAreaView>
   );

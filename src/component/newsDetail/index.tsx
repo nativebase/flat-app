@@ -7,8 +7,6 @@ import NewsText from './NewsText';
 import Caraousel from '../Caraousel';
 
 export default function NewsDetail(props: any) {
-  const { commentScreenNavigation } = props?.route?.params;
-
   const GoBack = () => {
     props.navigation.goBack();
   };
@@ -23,7 +21,6 @@ export default function NewsDetail(props: any) {
         GoBack={GoBack}
         mainHeader={false}
         NavigateTo={() => NavigateTo('Comment')}
-        commentScreenNavigation={commentScreenNavigation}
       />
       <ScrollView style={{ flex: 1 }}>
         <Image

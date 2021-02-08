@@ -6,10 +6,8 @@ import Header from '../../../component/Header';
 import List from './List';
 
 export default function ChannelDetail({ navigation }: any) {
-  const NavigateWithParam = (page: string) => {
-    navigation.navigate(page, {
-      commentScreenNavigation: false,
-    });
+  const NavigateTo = (page: string) => {
+    navigation.navigate(page);
   };
 
   const GoBack = () => {
@@ -23,12 +21,12 @@ export default function ChannelDetail({ navigation }: any) {
         <Image
           alt={'news'}
           source={{
-            uri: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIxE6GSySbZnhT9hZRy7poMs1Wo0Fn2GbU5g&usqp=CAU`,
+            uri: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrKHPsvNDJHY9tWpkHrfkfo8Dkf0LvZU3Hdg&usqp=CAU`,
           }}
           height={330}
           width={'100%'}
         />
-        <List NavigateTo={() => NavigateWithParam('NewsDetail')} />
+        <List NavigateTo={() => NavigateTo('NewsDetail')} />
       </ScrollView>
     </SafeAreaView>
   );
