@@ -83,7 +83,7 @@ export default function OnBoarding(props: AuthStackProps) {
                 size={'md'}
                 width={'auto'}
                 variant={'rounded'}
-                bg={'#728c75'}
+                bg={'green.200'}
                 color={'white.100'}
                 borderRadius={20}
                 onPress={() => props.navigation.navigate('DrawerHome')}

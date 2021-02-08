@@ -4,13 +4,13 @@ import { Text, Center, Box } from 'native-base';
 import { SafeAreaView } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-import Header from '../../../component/Header';
+import Header from '../Header';
 import CommentDetailScreen from './CommentDetailScreen';
-import MyCustomTabBar from '../../../component/CustomTabBar';
+import MyCustomTabBar from '../CustomTabBar';
 
 const Tab = createMaterialTopTabNavigator();
 
-export default function Comments(props: any) {
+export default function Comment(props: any) {
   const GoBack = () => {
     props.navigation.goBack();
   };

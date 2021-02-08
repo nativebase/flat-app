@@ -5,10 +5,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { DrawerProps } from '../../../interfaces';
 
 import NewsList from './NewsList';
-import Comment from './Comment';
 import Header from '../../../component/Header';
 import Caraousel from '../../../component/Caraousel';
 import NewsDetail from '../../../component/newsDetail';
+import Comment from '../../../component/comment';
 
 type RootStackParamList = {
   Home: undefined;

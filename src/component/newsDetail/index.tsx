@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
 import { Image } from 'native-base';
 
 import Header from '../Header';
 import NewsText from './NewsText';
 import Caraousel from '../Caraousel';
+import CustomModal from './Modal';
 
 export default function NewsDetail(props: any) {
+  const [isModal, setIsModal] = useState(false);
   const GoBack = () => {
     props.navigation.goBack();
   };
@@ -15,14 +17,20 @@ export default function NewsDetail(props: any) {
     props.navigation.navigate(page);
   };
 
+  const openModal = () => {
+    setIsModal(true);
+  };
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Header
         GoBack={GoBack}
         mainHeader={false}
         NavigateTo={() => NavigateTo('Comment')}
+        openModal={openModal}
       />
       <ScrollView style={{ flex: 1 }}>
+        <CustomModal isModal={isModal} setIsModal={setIsModal} />
         <Image
           alt={'news'}
           source={{

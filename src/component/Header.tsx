@@ -8,6 +8,8 @@ interface IProps {
   GoBack?: () => void;
   NavigateTo?: () => void;
   showBackArrow?: boolean;
+  commentScreenNavigation?: boolean;
+  openModal?: () => void;
 }
 
 export default function Header(props: IProps) {
@@ -76,7 +78,7 @@ export default function Header(props: IProps) {
             <Icon type='Ionicons' name='chatbox' color={'white.100'} size={8} />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={props.openModal}>
             <Icon
               name='format-letter-case'
               color={'white.100'}

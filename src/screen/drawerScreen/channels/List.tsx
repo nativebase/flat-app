@@ -8,7 +8,7 @@ export default function List(props: any) {
   return (
     <>
       {ONBOARDING_DATA.map((item: any, index: any) => (
-        <TouchableOpacity key={index} onPress={() => {}}>
+        <TouchableOpacity key={index} onPress={props.NavigateTo}>
           <Box
             height={150}
             bg={'white.100'}

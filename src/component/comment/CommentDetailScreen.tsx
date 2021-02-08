@@ -11,7 +11,7 @@ import {
   Input,
 } from 'native-base';
 
-import { COMMENT_USER } from '../../../../dummyData/Comments';
+import { COMMENT_USER } from '../../../dummyData/Comments';
 
 export default function CommentDetailScreen() {
   return (
