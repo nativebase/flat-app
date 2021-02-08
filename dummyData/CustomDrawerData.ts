@@ -29,7 +29,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'calendar',
     iconType: 'AntDesign',
     iconColor: 'black',
-    route: 'OverView',
+    route: 'Calender',
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'clock-time-ten-outline',
     iconType: 'MaterialCommunityIcons',
     iconColor: 'black',
-    route: 'OverView',
+    route: 'TimeLine',
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'user',
     iconType: 'FontAwesome',
     iconColor: 'black',
-    route: 'OverView',
+    route: 'Profile',
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const CUSTOM_DRAWER = [
     iconName: 'md-settings',
     iconType: 'Ionicons',
     iconColor: 'black',
-    route: 'OverView',
+    route: 'Setting',
   },
   {
     id: 8,
@@ -61,6 +61,6 @@ export const CUSTOM_DRAWER = [
     iconName: 'file',
     iconType: 'Octicons',
     iconColor: 'black',
-    route: 'OverView',
+    route: 'Feedback',
   },
 ];
