@@ -6,8 +6,10 @@ import Header from '../../../component/Header';
 import List from './List';
 
 export default function ChannelDetail({ navigation }: any) {
-  const NavigateTo = (page: string) => {
-    navigation.navigate(page);
+  const NavigateWithParam = (page: string) => {
+    navigation.navigate(page, {
+      commentScreenNavigation: false,
+    });
   };
 
   const GoBack = () => {
@@ -26,7 +28,7 @@ export default function ChannelDetail({ navigation }: any) {
           height={330}
           width={'100%'}
         />
-        <List NavigateTo={() => NavigateTo('NewsDetail')} />
+        <List NavigateTo={() => NavigateWithParam('NewsDetail')} />
       </ScrollView>
     </SafeAreaView>
   );

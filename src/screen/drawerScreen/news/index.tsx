@@ -19,8 +19,10 @@ type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 const Home = (props: any) => {
-  const NavigateTo = (page: string) => {
-    props.navigation.navigate(page);
+  const NavigateWithParam = (page: string) => {
+    props.navigation.navigate(page, {
+      commentScreenNavigation: true,
+    });
   };
 
   const OpenDrawer = () => {
@@ -35,9 +37,9 @@ const Home = (props: any) => {
           height={300}
           showText={true}
           showDots={true}
-          NavigateTo={() => NavigateTo('NewsDetail')}
+          NavigateTo={() => NavigateWithParam('NewsDetail')}
         />
-        <NewsList NavigateTo={() => NavigateTo('NewsDetail')} />
+        <NewsList NavigateTo={() => NavigateWithParam('NewsDetail')} />
       </ScrollView>
     </SafeAreaView>
   );

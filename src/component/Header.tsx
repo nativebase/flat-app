@@ -8,6 +8,7 @@ interface IProps {
   GoBack?: () => void;
   NavigateTo?: () => void;
   showBackArrow?: boolean;
+  commentScreenNavigation?: boolean;
 }
 
 export default function Header(props: IProps) {
@@ -72,9 +73,25 @@ export default function Header(props: IProps) {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={props.NavigateTo}>
-            <Icon type='Ionicons' name='chatbox' color={'white.100'} size={8} />
-          </TouchableOpacity>
+          {props.commentScreenNavigation ? (
+            <TouchableOpacity onPress={props.NavigateTo}>
+              <Icon
+                type='Ionicons'
+                name='chatbox'
+                color={'white.100'}
+                size={8}
+              />
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity>
+              <Icon
+                type='Ionicons'
+                name='chatbox'
+                color={'white.100'}
+                size={8}
+              />
+            </TouchableOpacity>
+          )}
 
           <TouchableOpacity>
             <Icon
