@@ -40,7 +40,6 @@ export default function NewsText() {
       <HStack mb={5} space={5}>
         <Divider
           orientation={'vertical'}
-          flex={1}
           borderColor={'green.100'}
           borderWidth={2}
         />

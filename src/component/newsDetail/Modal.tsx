@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Modal,
   ModalOverlay,
@@ -17,12 +17,7 @@ import {
 
 export default function NewsDetail(props: any) {
   return (
-    <Modal
-      isOpen={props.isModal}
-      onClose={props.setIsModal}
-      size={'full'}
-      p={0}
-    >
+    <Modal isOpen={props.isModal} onClose={props.setIsModal} size={'full'}>
       <ModalOverlay />
       <ModalContent pt={5} pb={3} pr={0} pl={0} bg={'green.100'}>
         <ModalBody>
